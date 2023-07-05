@@ -1,0 +1,13 @@
+<%- include('header.html') -%>
+
+<main>
+  <h1>TODOs</h1>
+  <%- include('./partials/todos/list.html') -%>
+
+  <h2>Add new</h2>
+  <form hx-post="/todos/" hx-target="#todos">
+    <input type="text" name="new" value="" />
+    <button>Add</button>
+  </form>
+</main>
+<%- include('footer.html') -%>

@@ -1,0 +1,10 @@
+<form hx-put="/todos/" hx-target="this" hx-swap="outerHTML">
+  <% todos.forEach(function(todo){ %>
+  <div>
+    <input type="text" name="<%= todo.id %>" value="<%= todo.description %>" />
+    <button type="button" onclick="this.parentNode.remove()">Delete</button>
+  </div>
+  <% }) %>
+  <button>Submit</button>
+  <button hx-get="/todos/list">Cancel</button>
+</form>

@@ -1,0 +1,9 @@
+<div hx-target="this" hx-swap="outerHTML" id="todos">
+  <ul>
+    <% todos.forEach(function(todo){ %>
+    <li data-id="<%= todo.id %>"><%= todo.description %></li>
+    <% }) %>
+  </ul>
+
+  <button hx-get="/todos/edit">Click To Edit</button>
+</div>
